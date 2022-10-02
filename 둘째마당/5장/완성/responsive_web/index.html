@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>FLAT DESIGN</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="">
+<link rel="shortcut icon" href="images/favicon/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="images/favicon/flat-design-touch.png">
+<script src="js/jquery.min.js"></script>
+<style>
+/* 모바일용 CSS */
+/* 기본 CSS */
+#wrap{
+/* 모바일용 css에서 태그가 어떻게 보일지를 설정하는 display속성의 값을 
+flex로 설정하여 모든 환경에서 플렉서블 박스로 작동하게 한다. */
+
+/* 모바일 환경에서 메인 페이지 구조를 살펴보면 박스들이 세로로 한 줄씩 배치
+되는 걸 알수 있다. 박스의 배치 방향과 여러 줄 배치를 한 번에 설정하기 위한 flex-flow속성의 값을
+column nowrap으로 설정하여 박스가 세로로 한 줄씩 배치되게 한다. */
+display:flex;
+flex-flow:column nowrap;
+
+/* 모바일 환경과 태블릿 환경에서는 너빗값을 80%로 설정할 것이므로 너빗값을 80%로 설정한다. */
+width:80%;
+
+/* 모든 환경에서 박스를 중앙으로 배치하기 위해 모바일용 css에서 마진값을 0 auto로, 최대 너빗값을 1200
+px로 설정한다. */
+margin:0 auto;
+max-width:1200px;
+}
+
+#wrap section{
+/* 박스 크기를 결정하는 방법을 변경하는 box-sizing 속성의 값을 선값과 패딩값
+을 너빗값에 포함하는 값인 border-box로 변경한다. */
+box-sizing:border-box;
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width:768px){
+/* 기본 CSS */
+#wrap{
+/* 태블릿 환경과 pc 환경에서 메인 페이지의 구조를 보면 박스들이 가로로 여러 줄 배치되어 있다.
+박스의 배치 방향과 여러 줄 배치를 한 번에 설정하기 위한 flex-flow 속성의 값을 박스를 가로로 배치하면서
+여러 줄로 배치하는 값인 row wrap으로 설정한다. */
+flex-flow:row wrap;
+}
+}
+
+/* PC용 CSS */
+@media all and (min-width:960px){
+/* 기본 CSS */
+#wrap{
+/* pc환경에서 메인 페이지의 구조를 보면 인포메이션 영역이 화면 상단 오른쪽에 위치해 있으므로
+인포메이션 영역이 놓일 위치의 기준을 결정하기 위해 요소의 위치를 설정하기 위한 position:relative로 설정해준다. */
+position:relative;
+width:90%;
+}
+}
+</style>
+</head>
+<body>
+	<div id="wrap">
+
+	</div>
+</body>
+</html>

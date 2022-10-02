@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>Document</title>
+<style>
+*{margin:0; padding:0;}
+
+#wrap{
+height:500px;
+margin:0 auto;
+border:4px solid #000;
+}
+
+@media all and (min-width:320px){
+#wrap{
+width:30%;
+background:#00d2a5;
+}
+}
+
+@media all and (min-width:768px){
+#wrap{
+width:60%;
+background:#40b0f9;
+}
+}
+
+@media all and (min-width:1024px){
+#wrap{
+width:90%;
+background:#f45750;
+}
+}
+/* 미디워 쿼리 사용시 주의사항
+1. 띄어쓰기 and 구문 사용시 항상 공백을 한 칸 띄어줘야 한다.
+2. min을 사용할 때는 반드시 크기가 작은 순서대로 작성해야 하고
+max를 사용할 때는 반드시 크기가 큰 순서대로 작성해야 한다. */
+
+/* 미디어 쿼리의 조건문을 사용해서 브라우저의 크기가 320px 이상일 때는 박스의 크기를
+30%로 만들면서 배경색을 변경한다. 768px 이상일 때는 박스의 크기를 60%로 만들면서
+배경색을 변경하고, 1024px 이상일 때는 박스의 크기를 90%로 만들면서 배경색을 변경한다. */
+</style>
+</head>
+<body>
+	<div id="wrap"></div>
+</body>
+</html>

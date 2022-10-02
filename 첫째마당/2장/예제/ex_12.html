@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title></title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+    
+video, iframe{
+width:100%;
+max-width:100%;
+}
+    
+#wrap{
+position:relative;
+/* 동영상 요소가 위치할 기준점을 만들기 위해 포지션 속성의 값을 상대적인 위치
+로 만들어주는 relative로 설정한다. 그리고 동영상 요소를 16:9로 만들기 위해 가변 그리드 공식을
+이용해서 얻은 값인 56.26%를 하단 패딩값으로 설정한다. 높잇값은 0으로 설정한다. */
+padding-bottom:56.25%;
+/* 9 ÷ 16 */
+height:0;
+overflow:hidden;
+}
+
+
+/* 요소의 위치를 설정해주는 속성인 포지션 속성의 값을 절대적인 위치로
+만들어주는 absolute로 설정한다. 그리고 요소의 위치 속성을 위쪽과 왼쪽을 0으로 설정한다. */
+iframe{
+position:absolute;
+top:0;
+left:0;
+height:100%;
+}
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <iframe src="https://player.vimeo.com/video/192526798?byline=0&badge=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+</body>
+</html>

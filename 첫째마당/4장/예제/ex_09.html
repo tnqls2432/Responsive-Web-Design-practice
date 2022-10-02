@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>Document</title>
+<style>
+*{margin:0; padding:0;}
+
+/* 플렉스 아이템의 배치 순서 바꾸기 */
+/* 입력된 정숫값에 따라 박스가 배치된다. 양수값과 음수값을 사용한다.
+양수값을 입력하면 입력된 양수값에 따라 배치된다. 음수값을 입력하면 기본값이 0이 된다.
+만약 동일한 양수값을 입력하면 html 태그 순서상 뒤에 작성된 태그가 적용된다. */
+
+#wrap{
+display:flex;
+width:90%;
+height:500px;
+margin:0 auto;
+border:4px solid #000;
+}
+
+#wrap div{
+width:33.33%;
+}
+
+#wrap div:first-child{
+order:3;
+background:#eb4a24;
+}
+
+#wrap div:nth-child(2){
+order:1;
+background:#1488c8;
+}
+
+#wrap div:nth-child(3){
+order:2;
+background:#f7e041;
+}
+
+/* 플렉스 아이템 중 첫 번째 박스의 순서는 세번째로, 두번째 박스의 순서는 첫번째
+로, 그리고 마지막 박스인 세 번째 박스의 순서는 두 번째로 변경한다. */
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div></div><div></div><div></div>
+	</div>
+</body>
+</html>
